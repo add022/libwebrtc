@@ -150,12 +150,10 @@ rtc_shared_library("libwebrtc"){
   defines = [ 
     "USE_LIBYUV",
     "WEBRTC_INCLUDE_INTERNAL_AUDIO_DEVICE",
-    "USE_INTEL_MEDIA_SDK",
   ]
 
   if(is_win) {
     include_dirs += [ "src/win/include" ]
-    defines += [ "USE_INTEL_MEDIA_SDK" ]
   }
   
   public_configs = [ ":external_config" ]
